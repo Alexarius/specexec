@@ -411,8 +411,6 @@ def main(args):
     if spec_generator.__class__.__name__ not in budget_classes:
         args.max_budget = "0"
         args.max_branch_width = "0"
-    elif args.max_budget is None:
-        args.max_budget = "32"
 
     # Convert string arguments to lists of integers
     sweep_args_present = []
@@ -494,26 +492,8 @@ if __name__ == "__main__":
     os.environ["TOKENIZERS_PARALLELISM"] = "false"  # avoiding warnings
 
     # DEFAULT MODEL NAMES
-    # model_name_0 = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
-    # model_name_1 = "meta-llama/Llama-2-7b-chat-hf"
-
-    # Qwen/Qwen2.5-0.5B /Qwen2.5-1.5B /Qwen2.5-3B /Qwen2.5-7B /Qwen2.5-14B
-    # /Qwen2.5-*B-Instruct
-
-    # Quantizations
-    # /Qwen2.5-*B-Instruct-GPTQ-Int4, /Qwen2.5-*B-Instruct-GPTQ-Int8
-    # /Qwen2.5-*B-Instruct-AWQ
-
-    # model_name_0 = "Qwen/Qwen2.5-0.5B-Instruct-GPTQ-Int4"
-    # model_name_1 = "Qwen/Qwen2.5-1.5B-Instruct"
-
-    # facebook/opt-125m /opt-350m /opt-1.3b /opt-2.7b /opt-6.7b /opt-13b
-    model_name_0 = "facebook/opt-6.7b"
-    model_name_1 = "facebook/opt-13b"
-
-    # bigscience/bloom-560m /bloom-1b1 /bloom-1b7 /bloom-3b /bloom-7b1
-    # model_name_0 = "bigscience/bloom-560m"
-    # model_name_1 = "bigscience/bloom-1b1"
+    model_name_0 = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+    model_name_1 = "meta-llama/Llama-2-7b-chat-hf"
 
     parser = argparse.ArgumentParser()
 

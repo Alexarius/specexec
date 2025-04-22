@@ -1,0 +1,13 @@
+{"msg_type": "config", "gen_type": "SpecExecBase", "model_0": "Qwen/Qwen2.5-3B", "model_1": "Qwen/Qwen2.5-14B", "temperature": 0.6, "max_n_beams": "128", "max_beam_len": "32", "top_p": 0.9, "max_new_tokens": 32, "max_budget": "32", "max_branch_width": "32", "branching": null, "min_log_prob": null, "replacement": false, "n_tests": 10, "seed": 0, "dataset": "oasst", "timestamp": "2025-03-21 01:00:30", "date": "250321", "hostname": "orin", "commit": "none", "offload": false, "device": "Orin"}
+{"msg_type": "zero", "mode": "zero"}
+{"msg_type": "zero", "prompt": 0, "elapsed": 8.063}
+{"msg_type": "zero", "prompt": 1, "elapsed": 6.454}
+{"msg_type": "zero", "prompt": 2, "elapsed": 6.945}
+{"msg_type": "zero", "prompt": 3, "elapsed": 6.058}
+{"msg_type": "zero", "prompt": 4, "elapsed": 5.847}
+{"msg_type": "zero", "prompt": 5, "elapsed": 6.971}
+{"msg_type": "zero", "prompt": 6, "elapsed": 7.212}
+{"msg_type": "zero", "prompt": 7, "elapsed": 7.692}
+{"msg_type": "zero", "prompt": 8, "elapsed": 7.012}
+{"msg_type": "zero", "prompt": 9, "elapsed": 6.705}
+{"msg_type": "zero", "total_time": 68.96, "speed": 4.64}

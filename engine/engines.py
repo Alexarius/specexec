@@ -28,9 +28,15 @@ class EngineRegular:
         self.kv_cache = DynamicCachePlus()
 
         # removing artifacts of StaticCache if previously used with the model
-        for i, layer in enumerate(self.model.model.layers):
+        # for i, layer in enumerate(self.model.model.layers):
+        for i, layer in enumerate(self.model.model.decoder.layers):
             if hasattr(layer.self_attn, "past_key_value"):
                 delattr(layer.self_attn, "past_key_value")
+
+        # for bloom
+        # for i, layer in enumerate(self.model.transformer.h):
+        #     if hasattr(layer.self_attention, "past_key_value"):
+        #         delattr(layer.self_attention, "past_key_value")
 
     @torch.inference_mode()
     def forward(
@@ -56,6 +62,11 @@ class EngineRegular:
             )
         else:
             assert torch.equal(cache_position, torch.arange(cache_position[0], cache_position[0] + cache_position.numel(), device=cache_position.device))
+
+            # print(position_ids)
+
+            # if attention_mask.dim() > 2:
+            #     attention_mask = attention_mask.reshape(attention_mask.size(0), -1)
 
             output = self.model.forward(
                 input_ids=input_ids,

@@ -1,6 +1,6 @@
-optimum
-auto-gptq
 anytree
+auto-gptq
 numpy
+optimum
 pandas
 transformers

@@ -47,7 +47,7 @@ class ModuleWithStorage(nn.Module):
     def forward(self, *args, **kwargs):
         return self.module(*args, **kwargs)
 
-    def __getattr__(self, name: str) -> torch.any:
+    def __getattr__(self, name: str) -> torch.Any:
         try:
             return super().__getattr__(name)
         except AttributeError:
